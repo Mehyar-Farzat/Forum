@@ -13,6 +13,6 @@ def questions_list(request):
 
 
 
-# def questions_detail(request,question_id):
-#     data = post.objects.get(id=question_id)
-#     return render(request,'question_detail.html', {'questions':data})
+def questions_detail(request,question_id):
+    data = Questions.objects.get(id=question_id)
+    return render(request,'question_detail.html', {'questions':data})
