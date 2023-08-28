@@ -22,5 +22,5 @@ class Questions(models.Model):
 class Answer(models.Model):
     user = models.ForeignKey(User,related_name='comment_author',on_delete=models.CASCADE)
     questions = models.ForeignKey(Questions , related_name='Answer_Questions', on_delete=models.CASCADE)
-    answer = models.TextField(max_length=500)
+    answer = models.TextField(max_length=10000)
     create_at = models.DateTimeField(default= timezone.now)
